@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { Metadata } from '../module'
+import { Metadata } from './module'
 
 export default (file, metadata:Metadata, signedUrl:string) => {
   return fetch(signedUrl, {

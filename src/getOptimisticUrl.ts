@@ -1,4 +1,4 @@
-import { IDictionary, Config } from "../module"
+import { IDictionary, Config } from "./module"
 
 export default ({baseUrl, bucketName}:Config, optimisticPath:IDictionary<string>) => {
   const storageUrl = 'https://storage.googleapis.com'

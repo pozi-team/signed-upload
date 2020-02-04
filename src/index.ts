@@ -1,4 +1,4 @@
-import { Metadata, Config } from '../module'
+import { Metadata, Config } from './module'
 import _getUrls from './getUrls'
 import _upload from './upload'
 

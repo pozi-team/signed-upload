@@ -1,4 +1,4 @@
-import { IDictionary, Metadata } from '../module'
+import { IDictionary, Metadata } from './module'
 
 const getExtension = fileName => fileName.split('.').pop()
 

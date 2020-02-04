@@ -1,5 +1,5 @@
 import { Storage } from '@google-cloud/storage'
-import { Metadata } from '../module'
+import { Metadata } from './module'
 
 const storage = new Storage()
 
