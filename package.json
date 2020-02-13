@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "tsc --declaration",
-    "test": "mocha -r ts-node/register tests/**/*.test.ts"
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "prepublish": "yarn build"
   }
 }

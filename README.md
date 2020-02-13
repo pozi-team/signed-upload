@@ -1,3 +1,6 @@
+[![npm (scoped)](https://img.shields.io/npm/v/@pozible/signed-upload.svg)](https://www.npmjs.com/package/@pozible/signed-upload)
+[![Build Status](https://travis-ci.org/pozible/signed-upload.svg?branch=master)](https://travis-ci.org/pozible/signed-upload)
+
 # @pozible/signed-upload
 Use [Signed URLs](https://cloud.google.com/storage/docs/access-control/signed-urls) to upload a file straight to Cloud Storage. It returns `optimisticUrl` to access the file once it is uploaded.
 
