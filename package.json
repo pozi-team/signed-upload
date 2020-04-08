@@ -1,6 +1,6 @@
 {
   "name": "@pozible/signed-upload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Bootstrapped file upload.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -29,6 +29,6 @@
   "scripts": {
     "build": "tsc --declaration",
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build && cp package.json dist && cp README.md dist"
   }
 }

@@ -6,9 +6,7 @@ const storage = new Storage()
 export default (metadata:Metadata, filePathWithExt:string, bucketName:string) => {
   const SECONDS = 10000
   const expires = Date.now() + 30 * SECONDS
-  const extensionHeaders = metadata ? {
-    extensionHeaders: {'x-goog-meta-data': JSON.stringify(metadata)}
-  } : {}
+  const metaHeader = metadata ? {'x-goog-meta-data': JSON.stringify(metadata)} : {}
 
   const myBucket = storage.bucket(bucketName)
   const bucketFile = myBucket.file(filePathWithExt)
@@ -16,7 +14,10 @@ export default (metadata:Metadata, filePathWithExt:string, bucketName:string) =>
     action: 'write',
     contentType: metadata.mimetype,
     expires,
-    ...extensionHeaders,
+    extensionHeaders: {
+      'content-type': metadata.mimetype,
+      ...metaHeader
+    },
     version: 'v4',
   })
 }
